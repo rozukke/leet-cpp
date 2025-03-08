@@ -1,3 +1,13 @@
+// Solution: use a hash map, with a "hash" of each word in the form of a 26-length frequency array
+// as the key to a list of words that are all anagrams. Each word is hashed and stored at the appropriate
+// list.
+// Requires O(n) space complexity (all words stored in map) and O(n) time complexity (each word hashed).
+//
+// Naive: store a 2D vector for each group, and for each word, check if the word is an anagram by iterating
+// through the vector. If none of them are a match, a new vector is added. The efficency of the anagram check
+// is variable between O(n log n) and O(n), while the algorithm itself is O(n^2) (each i in n checks up to index(i)
+// values, which is (n^2) / 2, simplifying to O(n^2)). 
+
 #include <unordered_map>
 #include <cstdint>
 

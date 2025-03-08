@@ -1,3 +1,16 @@
+// Solution: use bucket sort to store frequencies in a way where they do not have to be sorted.
+// Using an array the size of the input, store each input using the frequency of the input
+// (calculated using a hash map) as the index into the array. Since frequencies can repeat,
+// each element of the array must be a vector.
+// This array can be traversed backwards to find the top k most frequent elements.
+// Requires average O(n) space complexity (at least an empty vector per input) and O(n)
+// time complexity (all numbers iterated, and up to all frequencies iterated).
+// Somewhat insane, however.
+//
+// Naive: use a hashmap to count frequencies for each item, and then sort the kv pairs by the frequency,
+// grabbing the first k of the sorted list.
+// O(n log n) time complexity, O(n) space complexity.
+
 #include <unordered_map>
 #include <cstdint>
 #include <vector>

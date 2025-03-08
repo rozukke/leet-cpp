@@ -1,3 +1,14 @@
+// Solution: length is encoded at the start of every string, and is guaranteed to end with
+// a single delimiter (in this case ':'). E.g. "3:cat". To decode, one can simply take either
+// until the delimiter or until the first non-numeric character to deduce the length, which can
+// then be used to take a substring of the encoded string.
+// Optimisations can be made by reserving space for the expected string lengths.
+// Requires O(n) space and time complexity.
+//
+// Naive: this would not work for all cases, but one could use a specific delimiter and assume that
+// encoded strings will never contain it - might be more expensive as the delimiter would be
+// more effective and less likely to appear in strings when longer.
+
 #include <vector>
 #include <string>
 #include <algorithm>
