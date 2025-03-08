@@ -5,9 +5,11 @@
 // Naive: for each value, iterate forwards up to the value, keeping a product, and iterate backwards up to the value,
 // keeping the product. This would result in a time complexity of O(n^2) (one iteration of the input per item) and a
 // space complexity of O(1) (since no allocations need to be made).
+//
+// NOTE: This is very contrived due to the no / requirement. In reality, accumulating the product and then dividing by
+// each element for the result is much easier.
 
 #include <vector>
-#include <memory>
 
 class Solution {
 public:
@@ -17,7 +19,7 @@ public:
         std::vector<int> result;
         result.reserve(size);
 
-        auto suffixes = std::vector<int>;
+        std::vector<int> suffixes;
         suffixes.reserve(size + 1);
         // Account for last value
         suffixes[size] = 1;
