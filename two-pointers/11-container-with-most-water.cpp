@@ -14,7 +14,6 @@ public:
 
         int result = 0;
         while (l < r) {
-            std::cout << "left: " << l << ", right: " << r << "\n";
             result = std::max(result, (r - l) * std::min(height[l], height[r]));
             if (height[l] < height[r]) {
                 ++l;
