@@ -3,6 +3,10 @@
 // the overall minimum is.
 // The trick is to set the comparison to the rightmost value to capture the minimum in all
 // cases.
+//
+// NOTE: This property holds for the array itself... so as long as the rightmost value is
+// used for the comparison, the minimum is guaranteed to be found. Therefore, 2 searches
+// are not needed.
 
 class Solution {
 public:
